@@ -49,8 +49,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwind-scrollbar"), require("daisyui")],
-
-  daisyui: {
-    themes: ["light", "dark", "cupcake"],
-  },
 };

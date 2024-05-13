@@ -5,38 +5,60 @@ import Image from "next/image";
 // data
 const itemData = [
   {
-    img: "/about/gambar 2.jpg",
+    img: "/donasi/foto sebelum renovasi 1.jpg",
   },
   {
-    img: "/about/gambar 3.jpg",
+    img: "/donasi/foto sebelum renovasi 2.jpg",
   },
   {
-    img: "/about/gambar 4.jpg",
+    img: "/donasi/foto sebelum renovasi 3.jpg",
   },
   {
-    img: "/about/gambar 5.jpg",
+    img: "/donasi/foto sebelum renovasi 4.jpg",
   },
   {
-    img: "/about/gambar 6.jpg",
+    img: "/donasi/foto sebelum renovasi 5.jpg",
   },
   {
-    img: "/about/gambar 7.jpg",
+    img: "/donasi/foto sebelum renovasi 6.jpg",
   },
   {
-    img: "/about/gambar 8.jpg",
+    img: "/donasi/foto sebelum renovasi 7.jpg",
   },
   {
-    img: "/about/gambar 9.jpg",
+    img: "/donasi/foto sebelum renovasi 8.jpg",
+  },
+  {
+    img: "/donasi/foto sebelum renovasi 9.jpg",
+  },
+  {
+    img: "/donasi/foto sebelum renovasi 10.jpg",
+  },
+  {
+    img: "/donasi/foto sebelum renovasi 11.jpg",
+  },
+  {
+    img: "/donasi/foto sebelum renovasi 12.jpg",
+  },
+  {
+    img: "/donasi/foto sebelum renovasi 13.jpg",
+  },
+  {
+    img: "/donasi/foto sebelum renovasi 14.jpg",
+  },
+  {
+    img: "/donasi/foto sebelum renovasi 15.jpg",
   },
 ];
 
-const WorkSlider = () => {
+const DonasiSlider = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100%" }}>
       <Masonry columns={3} spacing={2}>
         {itemData.map((item, index) => (
           <div key={index}>
             <Image
+              className="rounded-md"
               srcSet={`${item.img}`}
               src={`${item.img}`}
               alt={item.title}
@@ -57,4 +79,4 @@ const WorkSlider = () => {
   );
 };
 
-export default WorkSlider;
+export default DonasiSlider;

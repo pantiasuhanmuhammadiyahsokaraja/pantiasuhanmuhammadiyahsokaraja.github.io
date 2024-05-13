@@ -6,7 +6,7 @@ import { fadeIn } from "../../variants";
 import AboutSlider from "../../components/AboutSlider";
 import Image from "next/image";
 
-const About = () => {
+const Tentang = () => {
   return (
     <div className="font-poppins text-black flex flex-col items-center justify-center w-full ">
       {/* Container */}
@@ -30,7 +30,7 @@ const About = () => {
             />
             {/* Text 2 */}
             <div className="xl:m-3">
-              <h1 className="h2 text-center">
+              <h1 className="text-2xl font-semibold text-center text-red-700 m-2 mt-1">
                 Panti Asuhan Muhammadiyah Sokaraja
               </h1>
               <p className="pb-3">
@@ -97,4 +97,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Tentang;

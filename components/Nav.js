@@ -2,35 +2,29 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
-  HiHome,
-  HiUser,
-  HiViewColumns,
-  HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
-  HiEnvelope,
+  HiMiniHeart,
+  HiMiniIdentification,
+  HiMiniHomeModern,
 } from "react-icons/hi2";
 
 // nav data
 export const navData = [
-  { name: "home", path: "/", icon: <HiHome /> },
-  { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "work", path: "/work", icon: <HiViewColumns /> },
-  // { name: "services", path: "/services", icon: <HiRectangleGroup /> },
-  // {
-  //   name: "testimonials",
-  //   path: "/testimonials",
-  //   icon: <HiChatBubbleBottomCenterText />,
-  // },
-  // {
-  //   name: "contact",
-  //   path: "/contact",
-  //   icon: <HiEnvelope />,
-  // },
+  { name: "home", path: "/", icon: <HiMiniHomeModern /> },
+  { name: "tentang", path: "/tentang", icon: <HiMiniIdentification /> },
+  { name: "donasi", path: "/donasi", icon: <HiMiniHeart /> },
 ];
 
 const Nav = () => {
   const router = useRouter();
   const pathname = router.pathname;
+
+  const handleClick = (event, linkPath) => {
+    event.preventDefault(); // Prevent default navigation
+
+    // Navigate to the new page and then scroll to top:
+    router.push(linkPath).then(() => window.scrollTo(0, 0));
+  };
+
   return (
     <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">
       {/* inner */}
@@ -42,7 +36,8 @@ const Nav = () => {
                 link.path === pathname && "text-active"
               } relative flex items-center group hover:text-active transition-all duration-300`}
               href={link.path}
-              key={index}>
+              key={index}
+              onClick={(e) => handleClick(e, link.path)}>
               {/* Tooltip */}
               <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
                 <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
