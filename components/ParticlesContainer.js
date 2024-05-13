@@ -48,10 +48,10 @@ const ParticlesContainer = () => {
         },
         particles: {
           color: {
-            value: "#e68e2e",
+            value: "#57CC99",
           },
           links: {
-            color: "#f5d393",
+            color: "#a2f593",
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -81,7 +81,19 @@ const ParticlesContainer = () => {
             value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: "polygon",
+            image: [
+              {
+                src: "",
+                width: 20,
+                height: 20,
+              },
+              {
+                src: "",
+                width: 20,
+                height: 20,
+              },
+            ],
           },
           size: {
             value: { min: 1, max: 5 },

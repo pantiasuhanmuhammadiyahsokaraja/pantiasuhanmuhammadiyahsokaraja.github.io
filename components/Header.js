@@ -2,10 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 // components
 import Socials from "../components/Socials";
+import { useEffect, useState } from "react";
 
-const Header = () => {
+const Header = ({ children }) => {
+  const [header, setHeader] = useState(false);
+
+  useEffect(() => {
+    const scrollYPos = window.addEventListener("scroll", () => {
+      window.scrollY > 50 ? setHeader(true) : setHeader(false);
+    }); // remove event
+    return () => window.removeEventListener("scroll", scrollYPos);
+  });
+
   return (
-    <header className="mx-auto z-60 flex items-center justify-center w-full py-1 bg-white">
+    <header
+      className={`${
+        header ? "py-2" : "py-3 shadow-lg md:shadow-sm"
+      } bg-[#fefefe] sticky top-0 z-30 transition-all mx-auto z-60 flex items-center justify-center w-full py-1`}>
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* logo */}

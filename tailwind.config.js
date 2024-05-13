@@ -39,7 +39,7 @@ module.exports = {
       fontFamily: {
         inter: [`var(--font-inter)`, "sans-serif"],
         poppins: [`var(--font-poppins)`, "sans-serif"],
-        sora: [`var(--font-sora)`, "sans-serif"],
+        roboto: [`var(--font-roboto)`, "sans-serif"],
       },
     },
   },

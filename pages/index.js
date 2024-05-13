@@ -9,19 +9,21 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="h-full font-inter">
+    <div className="font-poppins overflow-hidden">
       {/* text */}
       <div className="h-full w-full">
         <ParticlesContainer />
-        <div className="text-center flex flex-col py-32 xl:text-left h-full container">
+        <div className="container text-center flex flex-col py-32 xl:text-left mx-auto xl:mt-28">
           {/* title */}
           <motion.h1
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-primary">
-            PANTI ASUHAN MUHAMMADIYAH SOKARAJA
+            className="h1 text-primary leading-none">
+            PANTI ASUHAN
+            <br />
+            MUHAMMADIYAH SOKARAJA
           </motion.h1>
           {/* subtitle */}
           <motion.p
@@ -35,12 +37,9 @@ const Home = () => {
             Muhammadiyah Sokaraja
           </motion.p>
           {/* button */}
-          <div className="flex justify-center xl:hidden relative">
-            <ProjectsBtn />
-          </div>
           <motion.div
-            className="hidden xl:flex"
-            variants={fadeIn("down", 0.4)}
+            className="xl:flex"
+            variants={fadeIn("up", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden">
